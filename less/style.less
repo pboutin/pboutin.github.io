@@ -1,0 +1,184 @@
+@black : #161616;
+@white : #fdfdfd;
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body
+{
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  color: @black;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+
+section.container
+{
+  width: 500px;
+  margin-left: 10%;
+  padding: 25px;
+  box-shadow: 0 0 4px @black;
+  background-color: rgba(255,255,255,0.75);
+  height: 100%;
+}
+
+article
+{
+  overflow-x: hidden;
+}
+
+article.main
+{
+  h1, h2
+  {
+    margin: 0;
+    text-align: center;
+  }
+
+  h1
+  {
+    font-size: 70px;
+  }
+
+  .frontend { font-size: 44px; }
+  .entrepreneur { font-size: 41px; }
+  .student { font-size: 31px; }
+}
+
+article.content
+{
+  position: relative;
+
+  h1
+  {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  h2
+  {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: right;
+    margin: 10px 0 10px 0;
+  }
+}
+
+.business-desc
+{
+  display: inline-block;
+  width: 230px;
+  margin-left: 15px;
+  text-align: justify;
+}
+
+.blog
+{
+  text-align: justify;
+}
+
+p.social
+{
+  text-align: center;
+  a { margin: 0 15px; }
+}
+
+div.levis
+{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  background-color: @white;
+  border-top-left-radius: 4px;
+}
+
+// http://css-tricks.com/line-on-sides-headers/
+.los-title
+{
+  font-family: 'Merienda One', cursive;
+  text-align: center;
+  font-size: 30px;
+
+  span
+  {
+    display: inline-block;
+    position: relative;
+  }
+
+  span:before, span:after
+  {
+    content: "";
+    position: absolute;
+    height: 1px;
+    border-top: 1px solid @black;
+    top: 50%;
+    width: 600px;
+  }
+
+  span:before
+  {
+    right: 100%;
+    margin-right: 15px;
+  }
+
+  span:after
+  {
+    left: 100%;
+    margin-left: 15px;
+  }
+}
+
+.rotate(@deg)
+{
+  transform:rotate(@deg);
+  -ms-transform:rotate(@deg); /* IE 9 */
+  -webkit-transform:rotate(@deg); /* Safari and Chrome */
+}
+
+div.technos
+{
+  position: relative;
+
+  ul
+  {
+    margin-top: -110px;
+    margin-bottom: -105px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+    .rotate(270deg);
+
+    li
+    {
+      text-align: center;
+      color: @white;
+      background-color: rgba(22,22,22,0.9);
+      border-radius: 5px 5px 7px 5px;
+      padding: 3px 6px;
+      margin-top: 7px;
+      margin-bottom: 7px;
+      .rotate(25deg);
+    }
+  }
+}
+
+.rdio, .github, .twitter, .linkedin
+{ display: inline-block; background: url('../img/sprite.png') no-repeat; }
+
+.rdio { background-position: -0px -0px; width: 64px; height: 64px; }
+.github { background-position: -64px -0px; width: 64px; height: 64px; }
+.twitter { background-position: -0px -64px; width: 64px; height: 64px; }
+.linkedin { background-position: -64px -64px; width: 64px; height: 64px; }

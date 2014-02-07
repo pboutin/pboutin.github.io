@@ -1,0 +1,3 @@
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+@keyframes bgAnim{0%{background:#2277ff;} 25%{background:#0052d4;} 50%{background:#6fa6ff;} 100%{background:#2277ff;}}@-webkit-keyframes bgAnim /* Safari and Chrome */{0%{background:#2277ff;} 25%{background:#0867ff;} 50%{background:#6fa6ff;} 100%{background:#2277ff;}}html,body{width:100%;height:100%;animation:bgAnim 25s;-webkit-animation:bgAnim 25s;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;}
+section.container{width:800px;margin-left:auto;margin-right:auto;min-height:800px;}
