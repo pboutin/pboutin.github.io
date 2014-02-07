@@ -21,11 +21,16 @@ html, body
   margin: 0;
 }
 
+body.mobile
+{
+
+}
+
 section.container
 {
   width: 500px;
   margin-left: 10%;
-  padding: 25px;
+  padding: 15px 25px;
   box-shadow: 0 0 4px @black;
   background-color: rgba(255,255,255,0.75);
   height: 100%;
@@ -46,12 +51,15 @@ article.main
 
   h1
   {
-    font-size: 70px;
+    height: 115px;
+    line-height: 115px;
   }
 
-  .frontend { font-size: 44px; }
+  .pascal       { font-size: 147px; }
+  .boutin       { font-size: 147px; }
+  .frontend     { font-size: 44px; }
   .entrepreneur { font-size: 41px; }
-  .student { font-size: 31px; }
+  .student      { font-size: 31px; }
 }
 
 article.content
@@ -86,7 +94,7 @@ article.content
   text-align: justify;
 }
 
-p.social
+p.centered
 {
   text-align: center;
   a { margin: 0 15px; }
