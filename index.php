@@ -68,7 +68,7 @@ $isMobile = preg_match($phoneRegex, $_SERVER['HTTP_USER_AGENT']) == 1;
         <h1 class="los-title"><span>So social</span></h1>
         <p class="centered">
             <a href="https://github.com/pilogiq" class="github"></a>
-            <a href="ca.linkedin.com/pub/pascal-boutin/62/370/447/" class="linkedin"></a>
+            <a href="http://ca.linkedin.com/pub/pascal-boutin/62/370/447/" class="linkedin"></a>
             <a href="https://twitter.com/pilogiq" class="twitter"></a>
             <a href="http://www.rdio.com/people/infamc/" class="rdio"></a>
         </p>
