@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-html, body
+body
 {
   background: url("../img/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -19,11 +19,6 @@ html, body
   font-family: 'Oxygen', sans-serif;
   font-weight: normal;
   margin: 0;
-}
-
-body.mobile
-{
-
 }
 
 section.container
@@ -176,18 +171,22 @@ div.technos
       background-color: rgba(22,22,22,0.9);
       border-radius: 5px 5px 7px 5px;
       padding: 3px 6px;
-      margin-top: 7px;
-      margin-bottom: 7px;
-      .rotate(25deg);
+      margin-top: 12px;
+      margin-bottom: 12px;
+      .rotate(38deg);
       transition: background-color 750ms;
     }
 
     li:nth-child(1):hover { background-color: #F06529 }
-    li:nth-child(2):hover { background-color: #F06529 }
-    li:nth-child(3):hover { background-color: #F06529 }
-    li:nth-child(4):hover { background-color: #F06529 }
-    li:nth-child(5):hover { background-color: #F06529 }
-    li:nth-child(6):hover { background-color: #F06529 }
+    li:nth-child(2):hover { background-color: #2CA9E1 }
+    li:nth-child(3):hover { background-color: #BFAA43 }
+    li:nth-child(4):hover { background-color: #0769AD }
+    li:nth-child(5):hover { background-color: #DF462B }
+    li:nth-child(6):hover { background-color: #EA6B26 }
+    li:nth-child(7):hover { background-color: #573E7E }
+    li:nth-child(8):hover { background-color: #1D365D }
+    li:nth-child(9):hover { background-color: #F4655F }
+    li:nth-child(10):hover { background-color: #C92434 }
   }
 }
 
@@ -198,3 +197,16 @@ div.technos
 .github { background-position: -64px -0px; width: 64px; height: 64px; }
 .twitter { background-position: -0px -64px; width: 64px; height: 64px; }
 .linkedin { background-position: -64px -64px; width: 64px; height: 64px; }
+
+
+body.mobile
+{
+  background: none;
+
+  section.container
+  {
+    width: 100%;
+    margin-left: 0;
+    padding: 15;
+  }
+}

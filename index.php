@@ -11,12 +11,11 @@ $isMobile = preg_match($phoneRegex, $_SERVER['HTTP_USER_AGENT']) == 1;
     <meta name="author" content="Pascal Boutin" />
     <meta name="dcterms.rightsHolder" content="Pilogiq Enr." />
     <meta name="robots" content="All" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="description" content="WebMediq est une solution informatique Web destinée à accompagner les cliniques multidisciplinaires de partout dans leur travail en ce qui a trait à la gestion de leur vaste bagage de données." />
-    <meta name="keywords" content="WebMediq, logiciel, erp, saas, application web, gestion, dossier, patient, agenda, comptabilité, reçu, Pilogiq" />
+    <meta name="description" content="I'm a web developper, software engineering student and an entrepreneur from Quebec. I love all software-related subjects and geeky stuff." />
+    <meta name="keywords" content="Pascal, Boutin, web, web developpement, front-end, emberjs, handlebarsjs, jquery, cakephp, laravelphp, software engineering" />
 
     <?php if ($isMobile): ?>
-    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1'>
+    <meta name='viewport' content='width=device-width,initial-scale=0.65,maximum-scale=0.65'>
     <?php endif; ?>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -25,8 +24,9 @@ $isMobile = preg_match($phoneRegex, $_SERVER['HTTP_USER_AGENT']) == 1;
     <title>Pascal Boutin</title>
 
     <link href='http://fonts.googleapis.com/css?family=Merienda+One|Oxygen:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/less" href="less/style.less"/>
-    <script type="text/javascript" src="js/less-1.6.2.min.js"></script>
+    <link rel="stylesheet" type="text/less" href="css/style.min.css"/>
+    <!--<link rel="stylesheet" type="text/less" href="less/style.less"/>
+    <script type="text/javascript" src="js/less-1.6.2.min.js"></script>-->
 </head>
 <body <?php if ($isMobile) echo 'class="mobile"'; ?>>
 <section class="container">
@@ -48,8 +48,6 @@ $isMobile = preg_match($phoneRegex, $_SERVER['HTTP_USER_AGENT']) == 1;
                 <li>jQuery</li>
                 <li>EmberJs</li>
                 <li>HandlebarsJs</li>
-                <li>qUnit</li>
-                <li>MomentJs</li>
                 <li>Twitter Bootstrap</li>
                 <li>LessCSS</li>
                 <li>Laravel PHP</li>
@@ -82,6 +80,8 @@ $isMobile = preg_match($phoneRegex, $_SERVER['HTTP_USER_AGENT']) == 1;
     <hr/>
     <p class="centered">Pilogiq Enr. &copy; 2012-<?php echo date('Y') ?></p>
 </section>
+<?php if (!$isMobile): ?>
 <div class="levis">Picture : Lévis, Québec</div>
+<?php endif; ?>
 </body>
 </html>
