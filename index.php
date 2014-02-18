@@ -24,7 +24,7 @@ $isMobile = preg_match($phoneRegex, $_SERVER['HTTP_USER_AGENT']) == 1;
     <title>Pascal Boutin</title>
 
     <link href='http://fonts.googleapis.com/css?family=Merienda+One|Oxygen:400,700,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/less" href="css/style.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
     <!--<link rel="stylesheet" type="text/less" href="less/style.less"/>
     <script type="text/javascript" src="js/less-1.6.2.min.js"></script>-->
 </head>
