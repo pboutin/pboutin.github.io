@@ -8,23 +8,19 @@ markdown: kramdown
 
 
 defaults:
-  -
     scope:
       path: "" # empty string for all files
     values:
-      title: Pascal's diaries
+      title: ""
 
-description: Stylish Jekyll Theme
+description: Just another blog about frontend and web stuff...
+
 author:
   name: Pascal Boutin 
   email: pboutin@webcliniq.com
   github: https://github.com/pboutin
   linkedin: ca.linkedin.com/pub/pascal-boutin/62/370/447/
-  bio: Frontend freak, Resistance agent & software engineering student
   email_md5: f39075d6c30e8e91db9390a6b1b97e27
 
 rss_path: feed.xml
-categories_path: categories.html
-tags_path: tags.html
 
-BASE_PATH:
