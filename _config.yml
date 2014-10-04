@@ -11,7 +11,7 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: ""
+      title: "Some title"
 
 description: Just another blog about frontend and web stuff...
 
