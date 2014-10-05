@@ -78,9 +78,9 @@ article .share .gplus:hover {
 	border-color: #C13929;
 }
 
-.page-header {
-	color: #e74c3c;
-	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+.page-header h1 {
+    font-weight: 300;
+	color: #161616;
 }
 
 article{
@@ -162,12 +162,17 @@ footer {
 }
 
 .nav-tabs-vertical>li>a {
+    color: #777;
     line-height: 1.428571429;
     border: 1px solid transparent;
     border-radius: 4px 0 0 4px;
 }
 
-.badge { background: #161616; }
+.badge {
+    border: 1px dotted #161616;
+    background: #fff;
+    color: #161616;
+}
 
 #nav-menu{
     position: fixed;
