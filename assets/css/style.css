@@ -13,6 +13,16 @@ body{
 	color: #fff;
 }
 
+.sidebar .bio li {
+    font-weight: 300;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.sidebar img {
+    border: 2px solid white;
+}
+
 .sidebar-header {
 	text-align: center;
 	margin-bottom: 10px;
@@ -28,6 +38,10 @@ body{
 	color: #fff;
 }
 
+.sidebar div.menu {
+    margin: 0 35px;
+}
+
 a.nav-link {
 	padding-bottom: 5px;
 	padding-top: 7px;
@@ -38,31 +52,23 @@ a.nav-link i{
 }
 a.nav-link:hover { color: #777 }
 
-#contact-list li .fa,
-article .share .btn {
-	-o-transition:color .2s ease-out, background 1s ease-in;
-  -ms-transition:color .2s ease-out, background 1s ease-in;
-  -moz-transition:color .2s ease-out, background 1s ease-in;
-  -webkit-transition:color .2s ease-out, background 1s ease-in;
-  transition:color .2s ease-out, background 1s ease-in;
+#contact-list {
+    margin: 15px 0 20px 0;
 }
-#contact-list li:hover .fa-twitter,
-article .share .twitter:hover {
-	color: #00ACEE;
-	border-color: #00ACEE;
+
+#contact-list li a.btn {
+    height: 38px;
+    border-radius: 19px;
+    line-height: 26px;
+    border: 2px solid #fff;
+    transition: 1s all;
 }
-#contact-list li:hover .fa-linkedin {
-	color: #1D87BD;
+
+#contact-list li a.btn:hover {
+    background-color: #161616;
+    color: #fff;
 }
-#contact-list li:hover .fa-envelope {
-	color: #E93E30;
-}
-#contact-list li:hover .fa-pinterest {
-	color: #CC2127;
-}
-#contact-list li:hover .fa-rss {
-	color: #e74c3c;
-}
+
 article .share .facebook:hover {
 	color: #43609C;
 	border-color: #43609C;
@@ -70,10 +76,6 @@ article .share .facebook:hover {
 article .share .gplus:hover {
 	color: #C13929;
 	border-color: #C13929;
-}
-
-#contact-list-secondary {
-	padding-bottom: 10px;
 }
 
 .page-header {
