@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 
 body{
-	color: #2c3e50;
+	color: #161616;
 }
 
 .sidebar {
@@ -60,13 +60,21 @@ a.nav-link:hover { color: #777 }
     height: 38px;
     border-radius: 19px;
     line-height: 26px;
-    border: 2px solid #fff;
-    transition: 1s all;
 }
 
-#contact-list li a.btn:hover {
+.sidebar a.btn {    
+    border: 2px solid #fff;
+    transition: 500ms all;
+}
+
+.sidebar a.btn:hover {
     background-color: #161616;
     color: #fff;
+}
+
+article .share .twitter:hover {
+    color: #00ACEE;
+    border-color: #00ACEE;
 }
 
 article .share .facebook:hover {
@@ -98,7 +106,7 @@ article{
 	letter-spacing: 3px;
 }
 
-article {
+article, div.page-header {
 	padding: 0 5% 0;
 }
 
@@ -117,6 +125,7 @@ article.home h6 {
 	color: #161616;
     font-weight: 300;
     font-size: 3em;
+    margin-top: 0;
 }
 
 article.home h1 a,
