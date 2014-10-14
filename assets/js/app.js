@@ -6,7 +6,9 @@ $( document ).ready(function() {
 	/* Secondary contact links */
 	var scontacts = $('#contact-list-secondary');
 	var contact_list = $('#contact-list');
-	
+
+	$('table').addClass('table');
+
 	scontacts.hide();
 	
 	contact_list.mouseenter(function(){ scontacts.fadeIn(); });
