@@ -34,6 +34,6 @@ Those "???" means that you will have to find out the portals to visit based on a
 | 8 | [Statue Qui Est Ben Tannée De L'Hiver](https://www.ingress.com/intel?ll=46.78374,-71.274027&z=17&pll=46.78374,-71.274027) | Capture Portal |
 | 9 | [Pavillion De La Medcine Dentaire](https://www.ingress.com/intel?ll=46.78074,-71.281742&z=17&pll=46.78074,-71.281742) | Hack Portal |
 
-And here you go, enjoy your new medal !
+And there you go, enjoy your new medal !
 
 ![ULaval medal]({{ site.url }}/assets/img/ingress/ulaval_medal.png)
