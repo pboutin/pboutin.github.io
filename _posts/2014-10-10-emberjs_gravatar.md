@@ -6,7 +6,7 @@ tags: [emberjs]
 description: A clean way to bring Gravatar images to your EmberJS application.
 ---
 
-For the ones who see an "avatar feature" like nice to have and would like to integrate Gravatar in their EmberJS app easily, this one is for you.  
+For the ones who see an "avatar feature" like a nice to have and would like to integrate Gravatar in their EmberJS app easily, this component is what you might need.  
 
 To acheive this, we will use an Ember Component to wrap this up and create something that will be reusable all across your application. 
 
