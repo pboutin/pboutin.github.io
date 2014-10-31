@@ -3,6 +3,7 @@ layout: post
 title: Découverte du campus de l'Université Laval
 categories: [ingress]
 tags: []
+comments: true
 description: The complete solution walkthrough for the mission "Découverte du campus de l'Université Laval".
 ---
 

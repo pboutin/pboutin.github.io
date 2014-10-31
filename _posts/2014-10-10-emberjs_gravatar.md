@@ -3,6 +3,7 @@ layout: post
 title: Gravatar for EmberJS
 categories: [frontend]
 tags: [emberjs]
+comments: true
 description: A clean way to bring Gravatar images to your EmberJS application.
 ---
 
