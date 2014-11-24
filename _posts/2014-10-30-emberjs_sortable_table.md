@@ -4,7 +4,7 @@ title: Sortable array using EmberJS
 categories: [frontend]
 tags: [emberjs]
 comments: true
-description: How to make a simple component that will makes you tables sortable.
+description: How to make a simple component that will makes your HTML tables sortable.
 ---
 
 It's pretty common in an application that display a large amount of information, to be able to sort grids and tables by clicking their headers.
