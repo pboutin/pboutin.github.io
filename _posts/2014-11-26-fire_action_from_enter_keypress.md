@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Enter" triggered action with EmberJS.
+title: Enter key triggered action with EmberJS.
 categories: [frontend]
 tags: [emberjs]
 comments: true
