@@ -13,7 +13,7 @@ Ember-Data delivers a pretty usefull method called `.changedAttributes()` to tra
 
 It behaves like this :
 
-```
+```JavaScript
 post.set('title', 'Hurray !');
 post.set('body', 'Some text');
 post.changedAttributes(); -> {title: ['oldTitle','Hurray !'], body: ... }
@@ -25,7 +25,7 @@ Using this, you can easily get a list of the attributes that changed by doing `O
 
 Huh, this one is more tricky since Ember-Data doesn't offers this feature yet at the time of writting. But since I faced this need, I added this feature to `DS.Model`. Let me share it with you :
 
-```
+```JavaScript
 DS.Model.reopen({
     changedRelations: function() {
         var changedRelations = [];
