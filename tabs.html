@@ -1,0 +1,27 @@
+---
+layout: page
+title: Bass tabs
+---
+
+<article>
+    {% for tab in site.tabs %}
+
+    <div class="list-group">
+        <a class="list-group-item" href="{{ site.BASE_PATH }}{{ tab.url }}">
+            <strong>{{ tab.artist }}</strong>
+            &mdash;
+            {{ tab.title }}
+
+            <div class="pull-right">
+                {%if tab.youtube %}
+                    <i class="fa fa-youtube"></i>
+                {% endif %}
+                {%if tab.source %}
+                    <i class="fa fa-link"></i>
+                {% endif %}
+            </div>
+        </a>
+    </div>
+
+    {% endfor %}
+</article>

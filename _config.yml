@@ -7,6 +7,10 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
+collections:
+    tabs:
+        output: true
+        permalink: /tabs/:path/
 
 defaults:
     scope:
@@ -17,11 +21,10 @@ defaults:
 description: Just another blog about frontend and web stuff...
 
 author:
-  name: Pascal Boutin 
+  name: Pascal Boutin
   email: pboutin@webcliniq.com
   github: pboutin
   linkedin: ca.linkedin.com/pub/pascal-boutin/62/370/447/
   email_md5: f39075d6c30e8e91db9390a6b1b97e27
 
 rss_path: feed.xml
-
