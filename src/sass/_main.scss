@@ -1,0 +1,15 @@
+@keyframes blinking-caret {
+    0% {
+        border-right: 1px solid rgba(0,0,0,1);
+    }
+    50% {
+        border-right: 1px solid rgba(0,0,0,0);
+    }
+    100% {
+        border-right: 1px solid rgba(0,0,0,1);
+    }
+}
+
+.caret {
+    animation: blinking-caret 1s infinite;
+}

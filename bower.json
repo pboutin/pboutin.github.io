@@ -1,0 +1,21 @@
+{
+  "name": "pboutin.github.io",
+  "homepage": "https://github.com/pboutin/pboutin.github.io",
+  "authors": [
+    "Pascal Boutin <contact@pboutin.net>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "vue": "^1.0.21"
+  }
+}

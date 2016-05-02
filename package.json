@@ -1,0 +1,21 @@
+{
+  "name": "pboutin.github.io",
+  "description": "Personnal page",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pboutin/pboutin.github.io.git"
+  },
+  "author": "Pascal Boutin <contact@pboutin.net",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pboutin/pboutin.github.io/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5"
+  }
+}
