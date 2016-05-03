@@ -2,7 +2,9 @@ new Vue({
     el: '#vue',
     data: {
         currentQuote: '',
-        ongoingQuote: ''
+        ongoingQuote: '',
+
+        cv: null
     },
     methods: {
         quoteTick: function() {
@@ -15,6 +17,9 @@ new Vue({
 
             setTimeout(this.quoteTick.bind(this), (Math.random() * 400) + 100);
         }
+    },
+    init: function() {
+        this.cv = window.cv;
     },
     created: function() {
         this.quoteTick();
