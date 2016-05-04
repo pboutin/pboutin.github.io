@@ -43,5 +43,6 @@ new Vue({
     },
     created: function() {
         this.quoteTick();
+        new WOW().init();
     }
 });

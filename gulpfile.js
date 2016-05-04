@@ -6,6 +6,7 @@ const watch = require('gulp-watch');
 
 var sourcesJs = [
     './bower_components/vue/dist/vue.js',
+    './bower_components/wow/dist/wow.js',
     './src/js/quotes.js',
     './src/js/cv.js',
     './src/js/vue.js'

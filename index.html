@@ -8,40 +8,42 @@
 </head>
 <body>
     <div id="vue" class="container">
-        <header class="header">
+        <header class="header wow bounceIn">
             <h1 class="header__name">Pascal Boutin</h1>
             <p class="header__quote">{{ongoingQuote}}</p>
         </header>
 
-        <h1>Abilities</h1>
+        <h1 class="wow slideInRight">Abilities</h1>
 
-        <h2>Languages</h2>
+        <h2 class="wow slideInRight">Languages</h2>
         <ul class="list-unstyled">
-            <li v-for="skill in cv.skills.languages" class="skill">
+            <li v-for="skill in cv.skills.languages" class="skill wow slideInLeft">
                 <p class="skill__name">{{skill.name}}</p>
                 <div class="skill__progress">
-                    <div class="skill__progress__bar-{{skill.level}}"></div>
+                    <div class="skill__progress__bar-{{skill.level}} wow slideInLeft"
+                         data-wow-delay="300ms"></div>
                 </div>
             </li>
         </ul>
 
-        <h2>Frameworks and tools</h2>
+        <h2 class="wow slideInRight">Frameworks and tools</h2>
         <ul class="list-unstyled">
-            <li v-for="skill in cv.skills.misc" class="skill">
+            <li v-for="skill in cv.skills.misc" class="skill wow slideInLeft">
                 <p class="skill__name">{{skill.name}}</p>
                 <div class="skill__progress">
-                    <div class="skill__progress__bar-{{skill.level}}"></div>
+                    <div class="skill__progress__bar-{{skill.level}} wow slideInLeft"
+                         data-wow-delay="300ms"></div>
                 </div>
             </li>
         </ul>
 
-        <hr>
+        <hr class="wow lightSpeedIn">
 
-        <h1>Experiences</h1>
+        <h1 class="wow slideInRight">Experiences</h1>
 
-        <h2>Personal projects</h2>
+        <h2 class="wow slideInRight">Personal projects</h2>
         <ul class="list-unstyled">
-            <li v-for="project in cv.projects" class="experience">
+            <li v-for="project in cv.projects" class="experience wow slideInLeft">
                 <h3>{{project.title}}</h3>
                 <p class="experience__description">{{project.description}}</p>
                 <a href={{project.url}} target="_blank" class="experience__link">{{project.url}}</a>
@@ -57,9 +59,9 @@
 
         <hr>
 
-        <h2>Jobs</h2>
+        <h2 class="wow slideInRight">Jobs</h2>
         <ul class="list-unstyled">
-            <li v-for="job in cv.jobs" class="experience">
+            <li v-for="job in cv.jobs" class="experience wow slideInLeft">
                 <h3>{{job.title}}</h3>
                 <h4 class="experience__info">
                     {{job.business}}
@@ -87,9 +89,9 @@
 
         <hr>
 
-        <h2>Studies</h2>
+        <h2 class="wow slideInRight">Studies</h2>
         <ul class="list-unstyled">
-            <li v-for="study in cv.studies" class="experience">
+            <li v-for="study in cv.studies" class="experience wow slideInLeft">
                 <h3>{{study.title}}</h3>
                 <h4 class="experience__info">Graduated in {{study.year}}</h4>
                 <h4 class="experience__info">

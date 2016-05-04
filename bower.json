@@ -16,6 +16,7 @@
     "tests"
   ],
   "devDependencies": {
-    "vue": "^1.0.21"
+    "vue": "^1.0.21",
+    "wow": "^1.1.2"
   }
 }
