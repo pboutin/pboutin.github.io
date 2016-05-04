@@ -7,12 +7,13 @@ const watch = require('gulp-watch');
 var sourcesJs = [
     './bower_components/vue/dist/vue.js',
     './src/js/quotes.js',
+    './src/js/cv.js',
     './src/js/vue.js'
 ];
 
 gulp.task('default', ['sources', 'styles'], function() {
     gulp.watch('./src/js/*.js', ['sources']);
-    gulp.watch('./src/sass/*.scss', ['styles']);
+    gulp.watch('./src/sass/**/*.scss', ['styles']);
 });
 
 gulp.task('sources', function() {

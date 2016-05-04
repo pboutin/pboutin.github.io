@@ -1,0 +1,27 @@
+.tag-container {
+    margin-top: 10px;
+    text-align: left;
+
+    &__item {
+        border-left: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        margin-left: 1px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+
+        border-radius: $border-radius;
+        padding-left: $border-radius;
+        padding-right: $border-radius;
+
+        display: inline-block;
+
+        color: $background-color;
+        background: $primary-color;
+
+        &:before {
+            content: '#';
+            margin-right: -4px;
+
+        }
+    }
+}

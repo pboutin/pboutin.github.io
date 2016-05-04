@@ -1,15 +1,68 @@
+/*
+ * Fonts
+ ******************************************/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,400|Inconsolata);
+
+/*
+ * Variables
+ ******************************************/
+
+$primary-color: #fdfdfd;
+$secondary-color: $primary-color;
+$background-color: rgba(0,0,0,0.8);
+$border-radius: 3px;
+
+/*
+ * Animations
+ ******************************************/
+
 @keyframes blinking-caret {
     0% {
-        border-right: 1px solid rgba(0,0,0,1);
+        border-right: 1px solid rgba($secondary-color, 1);
     }
     50% {
-        border-right: 1px solid rgba(0,0,0,0);
+        border-right: 1px solid rgba($secondary-color, 0);
     }
     100% {
-        border-right: 1px solid rgba(0,0,0,1);
+        border-right: 1px solid rgba($secondary-color, 1);
     }
 }
 
-.caret {
-    animation: blinking-caret 1s infinite;
+/*
+ * Global styling
+ ******************************************/
+
+body {
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+    color: $secondary-color;
+    margin: 0;
+    height: 100%;
+
+    // Main container
+    > div {
+        height: 100%;
+        width: 480px;
+        margin-left: 50px;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: $background-color;
+    }
 }
+
+hr {
+    display: block;
+    width: 65px;
+    height: 5px;
+    background-color: $primary-color;
+    border: none;
+    margin-top: 40px;
+}
+
+h1, h2, h3, h4 {
+    color: $primary-color;
+    text-align: right;
+}
+

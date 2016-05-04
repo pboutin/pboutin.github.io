@@ -1,0 +1,19 @@
+.skill {
+    &__name:before {
+        content: '>';
+        padding-right: 3px;
+    }
+
+    &__progress {
+        border-bottom: 1px solid rgba($primary-color, 0.3);
+        height: 5px;
+
+        @for $i from 1 through 10 {
+            &__bar-#{$i} {
+                width: 10% * $i;
+                height: 100%;
+                background-color: $primary-color;
+            }
+        }
+    }
+}

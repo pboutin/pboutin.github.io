@@ -8,7 +8,98 @@
 </head>
 <body>
     <div id="vue" class="container">
-        <span class="caret">{{ongoingQuote}}</span>
+        <header class="header">
+            <h1 class="header__name">Pascal Boutin</h1>
+            <p class="header__quote">{{ongoingQuote}}</p>
+        </header>
+
+        <h1>Abilities</h1>
+
+        <h2>Languages</h2>
+        <ul class="list-unstyled">
+            <li v-for="skill in cv.skills.languages" class="skill">
+                <p class="skill__name">{{skill.name}}</p>
+                <div class="skill__progress">
+                    <div class="skill__progress__bar-{{skill.level}}"></div>
+                </div>
+            </li>
+        </ul>
+
+        <h2>Frameworks and tools</h2>
+        <ul class="list-unstyled">
+            <li v-for="skill in cv.skills.misc" class="skill">
+                <p class="skill__name">{{skill.name}}</p>
+                <div class="skill__progress">
+                    <div class="skill__progress__bar-{{skill.level}}"></div>
+                </div>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h1>Experiences</h1>
+
+        <h2>Personal projects</h2>
+        <ul class="list-unstyled">
+            <li v-for="project in cv.projects" class="experience">
+                <h3>{{project.title}}</h3>
+                <p class="experience__description">{{project.description}}</p>
+                <a href={{project.url}} target="_blank" class="experience__link">{{project.url}}</a>
+                <a href={{project.git}} target="_blank" class="experience__link">GitHub project</a>
+
+                <div class="tag-container">
+                    <span v-for="tag in project.tags" class="tag-container__item">
+                        {{tag}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Jobs</h2>
+        <ul class="list-unstyled">
+            <li v-for="job in cv.jobs" class="experience">
+                <h3>{{job.title}}</h3>
+                <h4 class="experience__info">
+                    {{job.business}}
+                    <span v-if="job.location" class="experience__info__muted">
+                        {{job.location}}
+                    </span>
+                </h4>
+                <h4 v-for="time in job.times" class="experience__info">
+                    {{time}}
+                </h4>
+                <p class="experience__description">{{job.description}}</p>
+                <ul class="experience__list">
+                    <li v-for="task in job.tasks" class="experience__list__item">
+                        {{task}}
+                    </li>
+                </ul>
+
+                <div class="tag-container">
+                    <span v-for="tag in job.tags" class="tag-container__item">
+                        {{tag}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2>Studies</h2>
+        <ul class="list-unstyled">
+            <li v-for="study in cv.studies" class="experience">
+                <h3>{{study.title}}</h3>
+                <h4 class="experience__info">Graduated in {{study.year}}</h4>
+                <h4 class="experience__info">
+                    {{study.school}}
+                    <span v-if="study.location" class="experience__info__muted">
+                        {{study.location}}
+                    </span>
+                </h4>
+            </li>
+        </ul>
     </div>
 
     <script type="text/javascript" src="dist/js/pboutin.js"></script>

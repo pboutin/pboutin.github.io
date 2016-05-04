@@ -3,13 +3,13 @@ window.cv = {
         {
             title: 'Software Engineering (B.Eng)',
             school: 'École de technologie supérieure',
-            location: 'Montreal, Quebec',
+            location: 'Montreal, Qc',
             year: '2016'
         },
         {
             title: 'Computer science',
             school: 'Cégep régional de Lanaudière à Joliette',
-            location: 'Joliette, Quebec',
+            location: 'Joliette, Qc',
             year: '2012'
         }
     ],
@@ -18,7 +18,7 @@ window.cv = {
             title: 'Founder, Fullstack Developer',
             business: 'WebCliniq Enr.',
             location: null,
-            time: 'April 2012 - Present',
+            times: ['April 2012 - Present'],
             description: 'WebCliniq is a SaaS that multidisciplinary clinics can use to manage their patients records, appointments, etc.',
             tasks: [
                 'Specifications analysis',
@@ -36,24 +36,11 @@ window.cv = {
         {
             title: 'Frontend Developer (internship)',
             business: 'Internap',
-            location: 'Montreal, Quebec',
-            time: 'August 2015 - December 2015',
-            description: 'Internap Corporation is an Internet infrastructure provider that offers cloud hosting powered by OpenStack and other hosting solutions.',
-            tasks: [
-                'Agile methodology',
-                'Test driven development (TDD)',
-                'Frontend development',
-                'Working with remote colleagues'
+            location: 'Montreal, Qc',
+            times: [
+                'August 2015 - December 2015',
+                'April 2014 - December 2014'
             ],
-            tags: [
-                'JavaScript (Object-oriented)', 'Knockout.js', 'jQuery', 'Python', 'PHP', 'SCSS'
-            ]
-        },
-        {
-            title: 'Frontend Developer (internship)',
-            business: 'Internap',
-            location: 'Montreal, Quebec',
-            time: 'April 2014 - December 2014',
             description: 'Internap Corporation is an Internet infrastructure provider that offers cloud hosting powered by OpenStack and other hosting solutions.',
             tasks: [
                 'Agile methodology',
@@ -68,8 +55,8 @@ window.cv = {
         {
             title: 'Web Developer (internship)',
             business: 'Technomedia',
-            location: 'Montreal, Quebec',
-            time: 'January 2013 - May 2013',
+            location: 'Montreal, Qc',
+            times: ['January 2013 - May 2013'],
             description: null,
             tasks: [
                 'Development'
@@ -95,7 +82,7 @@ window.cv = {
             url: 'http://pboutin.net',
             git: 'https://github.com/pboutin/pboutin.github.io',
             tags: [
-                'Vue.js', 'SCSS', 'Animate.css / WOW', 'JavaScript'
+                'Vue.js', 'SCSS (BEM)', 'Animate.css / WOW', 'JavaScript'
             ]
         },
         {
@@ -120,12 +107,12 @@ window.cv = {
     skills: {
         languages: [
             {name: 'JavaScript', level: 8},
-            {name: 'HTML/CSS', level: 8},
+            {name: 'HTML/CSS', level: 7},
             {name: 'PHP', level: 7},
-            {name: 'Python', level: 6},
+            {name: 'Python', level: 5},
             {name: 'Ruby', level: 3}
         ],
-        techs: [
+        misc: [
             {name: 'Git', level: 9},
             {name: 'Ember.js', level: 9},
             {name: 'Laravel', level: 7},

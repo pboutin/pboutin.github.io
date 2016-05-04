@@ -1,5 +1,22 @@
 window.quotes = [
-    'foobar',
-    'foobaz',
-    'foobang'
+    'npm install -g ember-cli',
+    'git status',
+    'Array(16).join({} - 1) + " Batman!"',
+    'ember serve --live-reload',
+    'composer install',
+    'npm install',
+    'bower install',
+    'I actually took the time to write this',
+    'I don\'t drink coffee',
+    'Not a huge Microsoft fan',
+    'A bit of a musician',
+    'Don\'t worry, I don\'t byte',
+    'Linux master race !',
+    'Use the -f Luke',
+    'It\'s finished, just need to test',
+    'Probably not good looking in IE8',
+    'Hmmmm, pizza',
+    'Marylou ♥',
+    'Fullstack with Frontend preferences',
+
 ];

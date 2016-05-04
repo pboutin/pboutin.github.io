@@ -1,0 +1,33 @@
+.header {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+
+    &__name {
+        font-family: Raleway, sans-serif;
+        font-weight: 200;
+        font-size: 5.2em;
+        letter-spacing: -3px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    &__quote {
+        font-family: Inconsolata, "Courier New";
+        font-size: 1.5em;
+
+        &:before {
+            content: '>';
+            padding-right: 5px;
+        }
+
+
+
+        &:after {
+            content: '';
+            animation: blinking-caret 1s infinite;
+            padding-right: 2px;
+        }
+    }
+}
