@@ -38,21 +38,27 @@ body {
     font-weight: 400;
     color: $secondary-color;
     margin: 0;
-    height: 100%;
-
-    background: url(../img/background.jpg) no-repeat center center fixed;
-    background-size: cover;
 
     // Main container
     > div {
         height: 100%;
-        width: 480px;
-        margin-left: 15vw;
         padding-top: 20px;
         padding-left: 20px;
         padding-right: 20px;
         background-color: $background-color;
-        overflow: hidden;
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        background: url(../img/background.jpg) no-repeat center center fixed;
+        background-size: cover;
+
+        > div {
+            width: 480px;
+            margin-left: 15vw;
+            overflow: hidden;
+        }
     }
 }
 
