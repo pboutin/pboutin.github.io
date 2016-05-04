@@ -1,4 +1,12 @@
-window.cv = {
+window.data = {
+    name: 'Pascal Boutin',
+    email: 'contact@pboutin.net',
+    phone: '514-654-6547',
+    linkedin: 'https://ca.linkedin.com/in/boutinpascal',
+    github: 'https://github.com/pboutin',
+    stackoverflow: 'http://stackoverflow.com/users/1401192/pascal-boutin',
+    bio: 'I am passionate about almost everything that can be used in a web browser. I am a fullstack web developer with a slight preference towards the frontend layer.',
+
     studies: [
         {
             title: 'Software Engineering (B.Eng)',

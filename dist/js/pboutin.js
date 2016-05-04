@@ -10449,7 +10449,6 @@ window.quotes = [
     'Probably not good looking in IE8',
     'Hmmmm, pizza',
     'Marylou ♥',
-    'Fullstack with Frontend preferences',
     '!important stuff',
     'Probably coding at the moment',
     'oh-my-zsh',
@@ -10471,7 +10470,15 @@ window.quotes = [
     'ping google.com'
 ];
 
-window.cv = {
+window.data = {
+    name: 'Pascal Boutin',
+    email: 'contact@pboutin.net',
+    phone: '514-654-6547',
+    linkedin: 'https://ca.linkedin.com/in/boutinpascal',
+    github: 'https://github.com/pboutin',
+    stackoverflow: 'http://stackoverflow.com/users/1401192/pascal-boutin',
+    bio: 'I am passionate about almost everything that can be used in a web browser. I am a fullstack web developer with a slight preference towards the frontend layer.',
+
     studies: [
         {
             title: 'Software Engineering (B.Eng)',
@@ -10604,7 +10611,12 @@ new Vue({
         currentQuote: '',
         ongoingQuote: '',
 
-        cv: window.cv
+        data: window.data
+    },
+    computed: {
+        sanitizedPhone: function() {
+            return this.data.phone.replace(/\D/g, '');
+        }
     },
     methods: {
         quoteTick: function() {
@@ -10640,6 +10652,7 @@ new Vue({
         }
     },
     created: function() {
+        document.title = this.data.name;
         this.quoteTick();
         new WOW().init();
     }

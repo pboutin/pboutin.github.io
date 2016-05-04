@@ -6,7 +6,12 @@ new Vue({
         currentQuote: '',
         ongoingQuote: '',
 
-        cv: window.cv
+        data: window.data
+    },
+    computed: {
+        sanitizedPhone: function() {
+            return this.data.phone.replace(/\D/g, '');
+        }
     },
     methods: {
         quoteTick: function() {
@@ -42,6 +47,7 @@ new Vue({
         }
     },
     created: function() {
+        document.title = this.data.name;
         this.quoteTick();
         new WOW().init();
     }

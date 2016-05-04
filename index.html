@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pascal Boutin</title>
 
     <link rel="stylesheet" href="dist/css/pboutin.css">
 </head>
 <body>
     <div id="vue" class="container">
-        <header class="header wow bounceIn">
-            <h1 class="header__name">Pascal Boutin</h1>
+        <header class="wow bounceIn header">
+            <h1 class="header__name">{{data.name}}</h1>
             <p class="header__quote">{{ongoingQuote}}</p>
+            <p class="header__bio">{{data.bio}}</p>
         </header>
 
         <h1 class="wow slideInRight">Abilities</h1>
 
         <h2 class="wow slideInRight">Languages</h2>
         <ul class="list-unstyled">
-            <li v-for="skill in cv.skills.languages" class="skill wow slideInLeft">
+            <li v-for="skill in data.skills.languages" class="skill wow slideInLeft">
                 <p class="skill__name">{{skill.name}}</p>
                 <div class="skill__progress">
                     <div class="skill__progress__bar-{{skill.level}} wow slideInLeft"
@@ -28,7 +28,7 @@
 
         <h2 class="wow slideInRight">Frameworks and tools</h2>
         <ul class="list-unstyled">
-            <li v-for="skill in cv.skills.misc" class="skill wow slideInLeft">
+            <li v-for="skill in data.skills.misc" class="skill wow slideInLeft">
                 <p class="skill__name">{{skill.name}}</p>
                 <div class="skill__progress">
                     <div class="skill__progress__bar-{{skill.level}} wow slideInLeft"
@@ -43,11 +43,11 @@
 
         <h2 class="wow slideInRight">Personal projects</h2>
         <ul class="list-unstyled">
-            <li v-for="project in cv.projects" class="experience wow slideInLeft">
+            <li v-for="project in data.projects" class="wow slideInLeft section">
                 <h3>{{project.title}}</h3>
-                <p class="experience__description">{{project.description}}</p>
-                <a href={{project.url}} target="_blank" class="experience__link">{{project.url}}</a>
-                <a href={{project.git}} target="_blank" class="experience__link">GitHub project</a>
+                <p class="section__description">{{project.description}}</p>
+                <a href={{project.url}} target="_blank" class="section__link">{{project.url}}</a>
+                <a href={{project.git}} target="_blank" class="section__link">GitHub project</a>
 
                 <div class="tag-container">
                     <span v-for="tag in project.tags" class="tag-container__item">
@@ -57,24 +57,24 @@
             </li>
         </ul>
 
-        <hr>
+        <hr class="wow lightSpeedIn">
 
         <h2 class="wow slideInRight">Jobs</h2>
         <ul class="list-unstyled">
-            <li v-for="job in cv.jobs" class="experience wow slideInLeft">
+            <li v-for="job in data.jobs" class="wow slideInLeft section">
                 <h3>{{job.title}}</h3>
-                <h4 class="experience__info">
+                <h4 class="section__info">
                     {{job.business}}
-                    <span v-if="job.location" class="experience__info__muted">
+                    <span v-if="job.location" class="section__info__muted">
                         {{job.location}}
                     </span>
                 </h4>
-                <h4 v-for="time in job.times" class="experience__info">
+                <h4 v-for="time in job.times" class="section__info">
                     {{time}}
                 </h4>
-                <p class="experience__description">{{job.description}}</p>
-                <ul class="experience__list">
-                    <li v-for="task in job.tasks" class="experience__list__item">
+                <p class="section__description">{{job.description}}</p>
+                <ul class="section__list">
+                    <li v-for="task in job.tasks" class="section__list__item">
                         {{task}}
                     </li>
                 </ul>
@@ -87,20 +87,32 @@
             </li>
         </ul>
 
-        <hr>
+        <hr class="wow lightSpeedIn">
 
         <h2 class="wow slideInRight">Studies</h2>
         <ul class="list-unstyled">
-            <li v-for="study in cv.studies" class="experience wow slideInLeft">
+            <li v-for="study in data.studies" class="wow slideInLeft section">
                 <h3>{{study.title}}</h3>
-                <h4 class="experience__info">Graduated in {{study.year}}</h4>
-                <h4 class="experience__info">
+                <h4 class="section__info">Graduated in {{study.year}}</h4>
+                <h4 class="section__info">
                     {{study.school}}
-                    <span v-if="study.location" class="experience__info__muted">
+                    <span v-if="study.location" class="section__info__muted">
                         {{study.location}}
                     </span>
                 </h4>
             </li>
+        </ul>
+
+        <hr class="wow lightSpeedIn">
+
+        <h1 class="wow slideInRight">Get in touch</h1>
+        <ul class="wow slideInLeft list-unstyled section">
+            <li><a class="section__link" target="_blank" href="{{data.stackoverflow}}">StackOverflow</a></li>
+            <li><a class="section__link" target="_blank" href="{{data.github}}">GitHub</a></li>
+            <li><a class="section__link" target="_blank" href="{{data.linkedin}}">LinkedIn</a></li>
+
+            <li><a class="section__link" href="mailto:{{data.email}}">{{data.email}}</a></li>
+            <li><a class="section__link" href="tel:{{sanitizedPhone}}">{{data.phone}}</a></li>
         </ul>
     </div>
 

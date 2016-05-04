@@ -30,4 +30,11 @@
             padding-right: 2px;
         }
     }
+
+    &__bio {
+        font-size: 1.1em;
+        border-left: 2px solid $primary-color;
+        padding-left: 10px;
+        padding-bottom: 2px;
+    }
 }

@@ -17,7 +17,6 @@ window.quotes = [
     'Probably not good looking in IE8',
     'Hmmmm, pizza',
     'Marylou ♥',
-    'Fullstack with Frontend preferences',
     '!important stuff',
     'Probably coding at the moment',
     'oh-my-zsh',
