@@ -82,7 +82,7 @@ window.cv = {
             url: 'http://pboutin.net',
             git: 'https://github.com/pboutin/pboutin.github.io',
             tags: [
-                'Vue.js', 'SCSS (BEM)', 'Animate.css / WOW', 'JavaScript'
+                'Vue.js', 'SCSS (BEM)', 'Animate.css / WOW', 'JavaScript', 'GitHub Pages'
             ]
         },
         {
