@@ -114,10 +114,10 @@ window.data = {
     ],
     skills: {
         languages: [
-            {name: 'JavaScript', level: 8},
-            {name: 'HTML/CSS', level: 7},
+            {name: 'JavaScript', level: 9},
+            {name: 'HTML/CSS', level: 8},
             {name: 'PHP', level: 7},
-            {name: 'Python', level: 5},
+            {name: 'Python', level: 6},
             {name: 'Ruby', level: 3}
         ],
         misc: [
