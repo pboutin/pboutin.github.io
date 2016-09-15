@@ -42,24 +42,6 @@
 
         <h1 class="wow slideInRight">Experiences</h1>
 
-        <h2 class="wow slideInRight">Personal projects</h2>
-        <ul class="list-unstyled">
-            <li v-for="project in data.projects" class="wow slideInLeft section">
-                <h3>{{project.title}}</h3>
-                <p class="section__description">{{project.description}}</p>
-                <a href={{project.url}} target="_blank" class="section__link">{{project.url}}</a>
-                <a href={{project.git}} target="_blank" class="section__link">GitHub project</a>
-
-                <div class="tag-container">
-                    <span v-for="tag in project.tags" class="tag-container__item">
-                        {{tag}}
-                    </span>
-                </div>
-            </li>
-        </ul>
-
-        <hr class="wow lightSpeedIn">
-
         <h2 class="wow slideInRight">Jobs</h2>
         <ul class="list-unstyled">
             <li v-for="job in data.jobs" class="wow slideInLeft section">
@@ -82,6 +64,24 @@
 
                 <div class="tag-container">
                     <span v-for="tag in job.tags" class="tag-container__item">
+                        {{tag}}
+                    </span>
+                </div>
+            </li>
+        </ul>
+
+        <hr class="wow lightSpeedIn">
+
+        <h2 class="wow slideInRight">Personal projects</h2>
+        <ul class="list-unstyled">
+            <li v-for="project in data.projects" class="wow slideInLeft section">
+                <h3>{{project.title}}</h3>
+                <p class="section__description">{{project.description}}</p>
+                <a href={{project.url}} target="_blank" class="section__link">{{project.url}}</a>
+                <a href={{project.git}} target="_blank" class="section__link">GitHub project</a>
+
+                <div class="tag-container">
+                    <span v-for="tag in project.tags" class="tag-container__item">
                         {{tag}}
                     </span>
                 </div>

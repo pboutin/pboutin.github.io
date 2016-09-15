@@ -23,6 +23,23 @@ window.data = {
     ],
     jobs: [
         {
+            title: 'Frontend Developer',
+            business: 'Internap',
+            location: 'Montreal, Qc',
+            times: ['August 2016 - Present'],
+            description: 'Internap Corporation is an Internet infrastructure provider that offers cloud hosting powered by OpenStack and other hosting solutions.',
+            tasks: [
+                'Agile methodology',
+                'Test driven development (TDD)',
+                'Frontend development',
+                'Remote',
+                'Open source collaboration'
+            ],
+            tags: [
+                'Icinga', 'OpenStack', 'JavaScript (Object-oriented)', 'Knockout.js', 'React.js', 'jQuery', 'Python', 'PHP', 'SCSS'
+            ]
+        },
+        {
             title: 'Founder, Fullstack Developer',
             business: 'WebCliniq Enr.',
             location: null,
