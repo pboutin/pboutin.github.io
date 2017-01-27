@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link rel="stylesheet" href="../_assets/reveal.css">
-    <link rel="stylesheet" href="../_assets/theme.css">
-    <link rel="stylesheet" href="../_assets/monokai_hljs.css">
+    <link rel="stylesheet" href="../assets/reveal.css">
+    <link rel="stylesheet" href="../assets/theme.css">
+    <link rel="stylesheet" href="../assets/monokai_hljs.css">
 </head>
 <body>
 <div class="reveal">
@@ -232,15 +232,15 @@
         </section>
     </div>
 </div>
-<script src="../_assets/head.js"></script>
-<script src="../_assets/reveal.js"></script>
+<script src="../assets/head.js"></script>
+<script src="../assets/reveal.js"></script>
 <script>
     Reveal.initialize({
         history: true,
         dependencies: [
-            { src: '../_assets/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            { src: '../_assets/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            { src: '../_assets/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../assets/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../assets/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../assets/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
         ]
     });
 </script>

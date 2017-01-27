@@ -22,7 +22,7 @@ gulp.task('sources', function() {
         .pipe(sourcemaps.init())
         .pipe(concat('pboutin.js'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./_assets/js'));
+        .pipe(gulp.dest('./assets/js'));
 });
 
 gulp.task('styles', function() {
@@ -30,5 +30,5 @@ gulp.task('styles', function() {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./_assets/css'));
+        .pipe(gulp.dest('./assets/css'));
 });
