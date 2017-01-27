@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../_assets/reveal.css">
+    <link rel="stylesheet" href="../_assets/theme.css">
+    <link rel="stylesheet" href="../_assets/monokai_hljs.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown>
+            <script type="text/template">
+
+            </script>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ## Ember.js
+                ### A framework for creating *ambitious* web applications
+                TODO Ember logo
+                *Par Pascal Boutin*
+            </script>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ### Plan de la présentation
+                - Bases d'Ember.js
+                - Pourquoi choisir Ember ?
+                - Pourquoi _ne pas_ choisir Ember ?
+                - Récapitulatif
+                - Demo
+                - Q&A
+            </script>
+        </section>
+        <section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Concepts de base
+                    TODO Ember logo
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Framework de _single-page application (SPA)_
+                    - Une seule page physique est téléchargée
+                    - Transfert d'informations avec un _backend_ via AJAX
+                    - Expérience utilisateur plus fluide
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Ember-cli
+                    - Outil en ligne de commande officiel
+                    - Orchestre/standardise le développement avec Ember
+
+                    `npm install -g ember-cli`
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Principales commandes
+                    - Génération de code
+                        - `ember generate <type> <nom>`
+                    - Server local
+                        - `ember serve`
+                    - Build statique
+                        - `ember build`
+                    - Rouler les tests
+                        - `ember test`
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Structure d'une application Ember
+                    | /app/ | |
+                    | --- | --- |
+                    | components    | styles        |
+                    | controllers   | templates     |
+                    | helpers       | *app.js*      |
+                    | locales       | *router.js*     |
+                    | models        | *index.html*    |
+                    | routes        |
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ## Principales composantes
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    `Ember.Object`
+                    - Élément de base
+                    - Tout _hérite_ de Ember.Object
+                    - Introduit des concepts très utiles
+                        - Héritage
+                        - Mixins
+                        - Observers / Computed attributes
+                        - etc
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    `Ember.Router` (app/router.js)
+                    - Déclare les routes de votre app
+                    - Modifié lors d'une génération de route
+                     ```JavaScript
+                    Router.map(function() {
+                        this.route('home', {path: '/'});
+                        this.route('servers', function() {
+                            this.route('new');
+                        });
+                        this.route('flavors');
+                        this.route('images');
+                    });
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    `Ember.Route` (app/routes/)
+                    - Initialisation d'une page
+                    - Charge le model (communication avec l'API)
+                    ```JavaScript
+                    // app/routes/servers.js
+                    // http://super-app.com/servers
+                    export default Ember.Route.extend({
+                        model() {
+                            return this.store.findAll('server');
+                        }
+                    });
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    Templating (app/templates/)
+                    - Utilise Handlebars
+                    - Rendu dynamique avec des `{{}}`
+                    - _Two-way binding_ : La donnée est directement liée au DOM
+                    ```Handlebars
+                    {{!-- app/templates/servers.hbs --}}
+                    <table class="servers">
+                        {{#each model as |server|}}
+                        <tr>
+                            <td>{{server.hostname}}</td>
+                            <td><code>{{server.ip}}</code></td>
+                            <td>{{server.status}}</td>
+                        </tr>
+                        {{/each}}
+                    </table>
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    `Ember.Helper` (app/helpers/)
+                    - Logique d'affichage simple utilisable depuis les templates
+                    - Fait pour être réutilisable
+                    ```JavaScript
+                    // app/helpers/memory.js
+                    export function memory(megabytes) {
+                        if (megabytes > 1024) {
+                            return (megabytes / 1024) + 'go';
+                        }
+                        return megabytes + 'mo';
+                    }
+                    ```
+                    ```Handlebars
+                    Storage : {{memory flavor.disk}} available.
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    `Ember.Controller (app/controllers/)`
+                    - C'est là que va la _business logic_
+                    - Gestion d'actions
+                    ```JavaScript
+                    // app/controllers/servers.js
+                    export default Ember.Controller.extend({
+                        actions: {
+                            reboot(server) {
+                                server.set('isRebooting', true);
+                                server.save();
+                            },
+                            delete(server) {
+                                server.destroyRecord();
+                            }
+                        }
+                    });
+                    ```
+                    ```Handlebars
+                    <button {{action 'delete' server}}>Kill !</button>
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    `Ember.Model` (app/models/)
+                    - Éléments liés à une couche de persistance (API)
+                    - Définit les champs à charger/sauvegarder
+                    - Définission de _computed attributes_
+                    ```JavaScript
+                    // app/models/server.js
+                    export default DS.Model.extend({
+                        hostname: DS.attr('string', {defaultValue: 'foo.bar'}),
+                        ip:       DS.attr('string'),
+                        status:   DS.attr('string'),
+
+                        flavor:   DS.belongsTo('flavor'),
+                        image:    DS.belongsTo('image'),
+
+                        isOn: Ember.computed('status', function() {
+                            return this.get('status') === 'on';
+                        })
+                    });
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    `Ember.Component` (app/components)
+                    - Composantes graphique réutilisables _(widget)_
+                    - Composé d'un fichier .js et d'un template .hbs
+                    TODO snippet maybe ?
+                </script>
+            </section>
+        </section>
+    </div>
+</div>
+<script src="../_assets/head.js"></script>
+<script src="../_assets/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: '../_assets/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../_assets/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '../_assets/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
+</body>
+</html>

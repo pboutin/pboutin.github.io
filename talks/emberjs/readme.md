@@ -1,0 +1,34 @@
+- Présentation perso.
+- Plan
+- Bases Ember.js
+    - Framework de SPA
+    - Installation d'Ember-cli
+    - Principales commandes d'Ember-cli
+    - Structure d'une app Ember
+    - Composantes d'une app Ember
+        - Ember.Object
+        - Ember.Router
+        - Ember.Route
+        - Templating Handlebars
+        - Ember.Helper
+        - Ember.Controller
+        - Ember.Model
+        - Ember.Component (vs React/Angular)
+- Pourquoi choisir Ember ?
+    - Convention over configuration
+    - ES6
+    - Flexibilité (.reopen)
+    - Test test test
+    - Intégration de plugins
+    - Support natif de JSON-API
+    - Bonne communauté
+    - Ember inspector
+- Pourquoi ne pas choisir Ember ?
+    - Huge size (performances)
+    - Peut être _overkill_ pour certains projets
+    - Age (deprecated docs/tutorials/plugins)
+    - Plusieurs compromis à faire
+- En gros... (examples de projets propices à Ember et vice-versa)
+- Demo poc-panel (avec Q'n'A)
+- Q'n'A
+    
