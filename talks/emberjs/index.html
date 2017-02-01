@@ -13,15 +13,20 @@
     <div class="slides">
         <section data-markdown>
             <script type="text/template">
-
+                ## Ember.js
+                ### A framework for creating *ambitious* web applications
+                ![Ember logo](tomster.png)
             </script>
         </section>
         <section data-markdown>
             <script type="text/template">
-                ## Ember.js
-                ### A framework for creating *ambitious* web applications
-                TODO Ember logo
-                *Par Pascal Boutin*
+                ### Qui suis-je ?
+                - Pascal Boutin
+                - Dev chez iWeb | Internap
+                - pboutin.net | github.com/pboutin
+                - Utilise Ember depuis les pré-releases
+
+                ![iweb](iweb.png)
             </script>
         </section>
         <section data-markdown>
@@ -30,8 +35,6 @@
                 - Bases d'Ember.js
                 - Pourquoi choisir Ember ?
                 - Pourquoi _ne pas_ choisir Ember ?
-                - Récapitulatif
-                - Demo
                 - Q&A
             </script>
         </section>
@@ -39,7 +42,6 @@
             <section data-markdown>
                 <script type="text/template">
                     ### Concepts de base
-                    TODO Ember logo
                 </script>
             </section>
             <section data-markdown>
@@ -54,7 +56,7 @@
                 <script type="text/template">
                     ### Ember-cli
                     - Outil en ligne de commande officiel
-                    - Orchestre/standardise le développement avec Ember
+                    - Orchestre/standardise le développement
 
                     `npm install -g ember-cli`
                 </script>
@@ -64,9 +66,9 @@
                     ### Principales commandes
                     - Génération de code
                         - `ember generate <type> <nom>`
-                    - Server local
+                    - Serveur local
                         - `ember serve`
-                    - Build statique
+                    - _Build_ statique
                         - `ember build`
                     - Rouler les tests
                         - `ember test`
@@ -75,14 +77,14 @@
             <section data-markdown>
                 <script type="text/template">
                     ### Structure d'une application Ember
-                    | /app/ | |
+                    | | |
                     | --- | --- |
-                    | components    | styles        |
-                    | controllers   | templates     |
-                    | helpers       | *app.js*      |
-                    | locales       | *router.js*     |
-                    | models        | *index.html*    |
-                    | routes        |
+                    | /components    | /styles        |
+                    | /controllers   | /templates     |
+                    | /helpers       | */app.js*      |
+                    | /locales       | */router.js*     |
+                    | /models        | */index.html*    |
+                    | /routes        |
                 </script>
             </section>
             <section data-markdown>
@@ -97,8 +99,8 @@
                     - Tout _hérite_ de Ember.Object
                     - Introduit des concepts très utiles
                         - Héritage
-                        - Mixins
-                        - Observers / Computed attributes
+                        - _Mixins_
+                        - _Observers_ / _Computed attributes_
                         - etc
                 </script>
             </section>
@@ -208,11 +210,8 @@
                     // app/models/server.js
                     export default DS.Model.extend({
                         hostname: DS.attr('string', {defaultValue: 'foo.bar'}),
-                        ip:       DS.attr('string'),
                         status:   DS.attr('string'),
-
                         flavor:   DS.belongsTo('flavor'),
-                        image:    DS.belongsTo('image'),
 
                         isOn: Ember.computed('status', function() {
                             return this.get('status') === 'on';
@@ -226,9 +225,133 @@
                     `Ember.Component` (app/components)
                     - Composantes graphique réutilisables _(widget)_
                     - Composé d'un fichier .js et d'un template .hbs
-                    TODO snippet maybe ?
                 </script>
             </section>
+        </section>
+        <section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Pourquoi choisir Ember.js
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### _Conventions over configurations_
+                    - Moins de code à écrire
+                    - Conventions gérées par ember-cli
+                    - Architecture standardisée
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### ES6 _(ECMAScript 6)_
+                    - Le vrai *futur du JS*
+                    - Disponible _out of the box_
+                    - Rétrocompatibilité assurée par ember-cli
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Flexibilité
+                    - Possibilité d'ajuster le framework
+                    ```JavaScript
+                    export default Resolver.reopen({
+                        resolveTemplate(name) {
+                          if (/Mobile|Android/.test(navigator.userAgent)) {
+                            let mobileName = name.fullName + '-mobile';
+                            mobileName = this.parseName(mobileName);
+                            return this._super(mobileName) || this._super(name);
+                          }
+                          return this._super(name);
+                        }
+                    });
+                    ```
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Test test test
+                    - Templates de tests générés par ember-cli
+                    - Tests unitaires, intégrations et acceptations
+                    - QUnit par défaut
+                    - Modules spécifiques pour chaque _unit_
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Intégrations de _addons_
+                    - _Wrappers_ pour **plusieurs** techs.
+                        - ember-bootstrap
+                        - ember-sass
+                        - ember-moment
+                        - etc...
+                    - Intégration automatique avec les _builds_
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Ember inspector
+                    - Permet de voir en détails
+                        - Les modèles chargées et leurs états
+                        - Toutes les _routes_, _controllers_, etc.
+                        - Les versions utilisées
+                    - Chrome, FireFox, Opera ou _Bookmarklet_
+                </script>
+            </section>
+        </section>
+        <section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Pourquoi _ne pas_ choisir Ember.js
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Performances
+                    - Ember est plûtot lourd (v2.2.0 - 435K)
+                        - Angular (v2 - 566K)
+                        - React (v0.14.5 - 133K)
+                        - Vue (v2.0.3 - 66K)
+                    ![Ember benchmarks](benchmarks.png)
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Changements
+                    - Beaucoup changé en se stabilisant...
+                        - Posts sur StackOverflow
+                        - Blogs/Tutorials
+                        - Addons ember-cli
+                    - Travaux de mise-à-jour fréquents
+                </script>
+            </section>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Plusieurs compromis à faire
+                    - Structure de l'application
+                    - Contrat de l'API
+                    - Outils
+                        - QUnit (test framework)
+                        - Testem (test runner)
+                        - Broccoli (asset pipeline)
+                </script>
+            </section>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ### En bref...
+                Ember.js est parfait pour :
+                - **Gros** projets
+                - **Plusieurs** modèles
+                - Besoin de **maintenabilité**
+                - Où la performance **n'est pas** un requis principal
+            </script>
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+                ## Des questions ?
+                ![](ember_love.png)
+            </script>
         </section>
     </div>
 </div>
@@ -237,6 +360,7 @@
 <script>
     Reveal.initialize({
         history: true,
+        slideNumber: true,
         dependencies: [
             { src: '../assets/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
             { src: '../assets/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },

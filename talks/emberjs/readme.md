@@ -20,15 +20,11 @@
     - Flexibilité (.reopen)
     - Test test test
     - Intégration de plugins
-    - Support natif de JSON-API
-    - Bonne communauté
     - Ember inspector
 - Pourquoi ne pas choisir Ember ?
     - Huge size (performances)
-    - Peut être _overkill_ pour certains projets
     - Age (deprecated docs/tutorials/plugins)
     - Plusieurs compromis à faire
 - En gros... (examples de projets propices à Ember et vice-versa)
-- Demo poc-panel (avec Q'n'A)
 - Q'n'A
     
