@@ -159,25 +159,6 @@
             </section>
             <section data-markdown>
                 <script type="text/template">
-                    `Ember.Helper` (app/helpers/)
-                    - Logique d'affichage simple utilisable depuis les templates
-                    - Fait pour être réutilisable
-                    ```JavaScript
-                    // app/helpers/memory.js
-                    export function memory(megabytes) {
-                        if (megabytes > 1024) {
-                            return (megabytes / 1024) + 'go';
-                        }
-                        return megabytes + 'mo';
-                    }
-                    ```
-                    ```Handlebars
-                    Storage : {{memory flavor.disk}} available.
-                    ```
-                </script>
-            </section>
-            <section data-markdown>
-                <script type="text/template">
                     `Ember.Controller (app/controllers/)`
                     - C'est là que va la _business logic_
                     - Gestion d'actions
@@ -248,24 +229,6 @@
                     - Le vrai *futur du JS*
                     - Disponible _out of the box_
                     - Rétrocompatibilité assurée par ember-cli
-                </script>
-            </section>
-            <section data-markdown>
-                <script type="text/template">
-                    ### Flexibilité
-                    - Possibilité d'ajuster le framework
-                    ```JavaScript
-                    export default Resolver.reopen({
-                        resolveTemplate(name) {
-                          if (/Mobile|Android/.test(navigator.userAgent)) {
-                            let mobileName = name.fullName + '-mobile';
-                            mobileName = this.parseName(mobileName);
-                            return this._super(mobileName) || this._super(name);
-                          }
-                          return this._super(name);
-                        }
-                    });
-                    ```
                 </script>
             </section>
             <section data-markdown>
