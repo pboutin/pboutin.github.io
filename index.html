@@ -27,7 +27,7 @@
             </li>
         </ul>
 
-        <h2 class="wow slideInRight">Frameworks and tools</h2>
+        <h2 class="wow slideInRight">Other skills</h2>
         <ul class="list-unstyled">
             <li v-for="skill in data.skills.misc" class="skill wow slideInLeft">
                 <p class="skill__name">{{skill.name}}</p>
@@ -85,6 +85,17 @@
                         {{tag}}
                     </span>
                 </div>
+            </li>
+        </ul>
+
+        <hr class="wow lightSpeedIn">
+
+        <h2 class="wow slideInRight">Achievements</h2>
+        <ul class="wow slideInLeft list-unstyled section">
+            <li v-for="achievement in data.achievements">
+                <a class="section__link" target="_blank" href="{{achievement.url}}">
+                    {{achievement.description}}
+                </a>
             </li>
         </ul>
 

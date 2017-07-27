@@ -23,8 +23,8 @@ window.data = {
     ],
     jobs: [
         {
-            title: 'Frontend Developer',
-            business: 'Internap',
+            title: 'Fullstack Developer',
+            business: 'iWeb | Internap',
             location: 'Montreal, Qc',
             times: ['August 2016 - Present'],
             description: 'Internap Corporation is an Internet infrastructure provider that offers cloud hosting powered by OpenStack and other hosting solutions.',
@@ -33,24 +33,24 @@ window.data = {
                 'Test driven development (TDD)',
                 'Frontend development',
                 'Remote',
-                'Open source collaboration'
+                'Open source collaborations'
             ],
             tags: [
-                'Icinga', 'OpenStack', 'JavaScript (Object-oriented)', 'Knockout.js', 'React.js', 'jQuery', 'Python', 'PHP', 'SCSS'
+                'Icinga', 'OpenStack', 'JavaScript ES6', 'Ember.js', 'React.js', 'Node (express)', 'Python', 'PHP', 'SCSS'
             ]
         },
         {
             title: 'Founder, Fullstack Developer',
             business: 'WebCliniq Enr.',
             location: null,
-            times: ['April 2012 - Present'],
+            times: ['April 2012 - January 2017'],
             description: 'WebCliniq is a SaaS that multidisciplinary clinics can use to manage their patients records, appointments, etc.',
             tasks: [
                 'Specifications analysis',
                 'Conception of the whole solution',
                 'Frontend development',
                 'API implementation',
-                'Devops',
+                'DevOps',
                 'Automated testing and QA',
                 'Customer support'
             ],
@@ -60,7 +60,7 @@ window.data = {
         },
         {
             title: 'Frontend Developer (internship)',
-            business: 'Internap',
+            business: 'iWeb | Internap',
             location: 'Montreal, Qc',
             times: [
                 'August 2015 - December 2015',
@@ -70,8 +70,7 @@ window.data = {
             tasks: [
                 'Agile methodology',
                 'Test driven development (TDD)',
-                'Frontend development',
-                'Working with remote colleagues'
+                'Frontend development'
             ],
             tags: [
                 'JavaScript (Object-oriented)', 'Knockout.js', 'jQuery', 'Python', 'PHP', 'SCSS'
@@ -93,12 +92,12 @@ window.data = {
     ],
     projects: [
         {
-            title: 'Waitress',
-            description: 'Web application where we can list our usual dishes in groups. The main purpose is to answer the age old question: "What are we eating tonight ?"',
-            url: 'http://waitress.firebaseapp.com',
-            git: 'https://github.com/pboutin/waitress',
+            title: 'Dofus Center',
+            description: '[French only] A fansite that proposes tools for the MMORPG Dofus.',
+            url: 'https://dofus.center/',
+            git: 'https://github.com/pboutin/dofus-center',
             tags: [
-                'Ember.js', 'Ember-cli', 'Firebase', 'Bootstrap', 'jQuery', 'JavaScript', 'Isotope'
+                'Ember.js', 'Ember-cli', 'Firebase', 'WebScraping', 'Python'
             ]
         },
         {
@@ -118,32 +117,33 @@ window.data = {
             tags: [
                 'Vue.js', 'Bootstrap', 'Twitch API', 'jQuery', 'JavaScript', 'GitHub Pages'
             ]
-        },
-        {
-            title: 'Pebble AGDQ',
-            description: 'Application for Pebble smartwatches that shows upcoming streams during AGDQ events.',
-            url: 'https://apps.getpebble.com/applications/568600106b84271ec8000061',
-            git: 'https://github.com/pboutin/pebble-agdq',
-            tags: [
-                'CloudPebble (Pebble.js)', 'Moment.js', 'JavaScript'
-            ]
         }
     ],
     skills: {
         languages: [
-            {name: 'JavaScript', level: 9},
-            {name: 'HTML/CSS', level: 8},
-            {name: 'PHP', level: 7},
-            {name: 'Python', level: 6},
+            {name: 'JavaScript (ES6)', level: 9},
+            {name: 'HTML & SASS', level: 7},
+            {name: 'Python', level: 7},
+            {name: 'PHP', level: 5},
             {name: 'Ruby', level: 3}
         ],
         misc: [
             {name: 'Git', level: 9},
             {name: 'Ember.js', level: 9},
-            {name: 'Laravel', level: 7},
-            {name: 'Gulp', level: 7},
-            {name: 'SCSS/LESS', level: 6},
+            {name: 'Ux design', level: 6},
+            {name: 'Express.js', level: 6},
+            {name: 'React.js', level: 6},
             {name: 'Rails', level: 3}
         ]
-    }
+    },
+    achievements: [
+        {
+            description: 'Presented an Ember.js talk at Quebec\'s DevDrinks.',
+            url: 'http://pboutin.net/talks/emberjs'
+        },
+        {
+            description: 'Contributed to the OpenStack dashboard project.',
+            url: 'https://www.openstack.org/community/members/profile/72678/pascal-boutin'
+        }
+    ]
 };
