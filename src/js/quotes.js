@@ -16,7 +16,6 @@ window.quotes = [
     'It\'s finished, just need to test',
     'Probably not good looking in IE8',
     'Hmmmm, pizza',
-    'Marylou ♥',
     '!important stuff',
     'Probably coding at the moment',
     'oh-my-zsh',
